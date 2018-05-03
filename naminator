@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+names = File.read('names.txt').each_line.map(&:strip)
+adjectives = File.read('adjectives.txt').each_line.map(&:strip)
+
+puts adjectives.product(names).sample(1).join('_')
